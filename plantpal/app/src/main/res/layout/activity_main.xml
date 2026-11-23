@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_35"
+    tools:context=".MainActivity">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="App Logo"
+        app:layout_constraintTop_toBottomOf="@id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Start Button -->
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/img_35"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif"
+        android:text="Get Started"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

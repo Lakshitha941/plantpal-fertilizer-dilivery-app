@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/img_35"
+    tools:context=".EndPageActivity">
+
+    <!-- Thank You Heading -->
+    <TextView
+        android:id="@+id/tvThankYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉 Thank You!"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <!-- Subtitle / Summary Heading -->
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvThankYou"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Here’s a quick summary of your activity:"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black" />
+
+    <!-- Example Details -->
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSummary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="• Actions Completed: 12\n• Time Spent: 25 mins\n• Rewards Earned: 3"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+
+    <!-- Return to Home Button -->
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Return to Home"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"
+        android:elevation="6dp" />
+
+</RelativeLayout>

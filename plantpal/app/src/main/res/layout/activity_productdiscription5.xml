@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_23"
+    tools:context=".productdiscription">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#D5F1DC"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoImage"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to PLANT PAL"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cedar Grove"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Product Subtitle -->
+
+    <!-- Product Image -->
+    <TextView
+        android:id="@+id/productType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="zwavelzure ammoniak"
+        android:textColor="#444"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="105dp"
+        android:layout_height="169dp"
+        android:layout_margin="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productType"
+        app:srcCompat="@drawable/img_37" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/productDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Made from locally recycled garden prunings, food products and vegetable trimmings. Contains no biosolids or steer manure."
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="#333"
+        app:layout_constraintTop_toBottomOf="@+id/productImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Features Row -->
+    <LinearLayout
+        android:id="@+id/featuresRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/productDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/img_13"/>
+            <TextView
+                android:text="Feeds the soil"
+                android:textSize="12sp"
+                android:textColor="#000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/img_14"/>
+            <TextView
+                android:text="Great start for seeds"
+                android:textSize="12sp"
+                android:textColor="#000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/img_15"/>
+            <TextView
+                android:text="Seals in moisture"
+                android:textSize="12sp"
+                android:textColor="#000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Quantity Selector -->
+
+    <LinearLayout
+        android:id="@+id/quantitySelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="523dp"/>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/actionButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/quantitySelector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"/>
+
+        <Button
+            android:id="@+id/btnBuyNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Buy Now"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
