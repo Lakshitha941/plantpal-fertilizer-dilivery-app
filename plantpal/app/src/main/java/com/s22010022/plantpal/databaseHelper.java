@@ -108,7 +108,7 @@ public class databaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    // --- User Auth Methods ---
+    // user authentication
     public boolean signUpInsert(String userName, String email, String nic, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -161,7 +161,7 @@ public class databaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    // --- Cart Methods ---
+    // cart methods
     public boolean addToCart(String userName, String productName, String category, double price, int quantity, int imageResId) {
         SQLiteDatabase db = this.getWritableDatabase();
         // Check if item already exists in cart for this user
@@ -226,7 +226,7 @@ public class databaseHelper extends SQLiteOpenHelper {
         return total;
     }
 
-    // --- Order Methods ---
+    // order placement
     public long insertOrder(String userName, String fullName, String address, String city, String phone, double totalAmount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

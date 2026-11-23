@@ -72,7 +72,7 @@ public class cart extends AppCompatActivity {
 
             // Empty cart view
             TextView emptyTv = new TextView(this);
-            emptyTv.setText("🛒 Your cart is currently empty.\nExplore Dashboard to add fertilizers!");
+            emptyTv.setText("Your cart is currently empty.\nPlease add items from the store.");
             emptyTv.setTextSize(16);
             emptyTv.setGravity(Gravity.CENTER);
             emptyTv.setPadding(32, 64, 32, 64);

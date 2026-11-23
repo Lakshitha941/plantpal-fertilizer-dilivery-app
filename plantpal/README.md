@@ -1,111 +1,75 @@
-# 🌿 Plant Pal New - Smart Fertilizer & Gardening Delivery App
+# Plant Pal - Mobile Application
 
-[![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
-[![Java](https://img.shields.io/badge/Language-Java-orange.svg)](https://www.java.com)
-[![SQLite](https://img.shields.io/badge/Database-SQLite-blue.svg)](https://www.sqlite.org)
-[![Retrofit](https://img.shields.io/badge/Networking-Retrofit_2.9.0-brightgreen.svg)](https://square.github.io/retrofit/)
-[![Google Maps](https://img.shields.io/badge/Maps-Google_Maps_SDK-red.svg)](https://developers.google.com/maps)
-
-**Plant Pal New** is a full-featured native Android mobile application designed to empower gardeners, home growers, and commercial farmers to easily browse, select, and order organic, synthetic, and specialized fertilizer blends with real-time weather integration and branch navigation.
+**Student Registration No:** s22010022  
+**Module:** Mobile Application Development (MAD)  
+**Project:** Plant Pal - Fertilizer & Plant Care Android App  
 
 ---
 
-## ✨ Key Features
+## Project Overview
 
-- **🔐 User Authentication & Session Management**:
-  - Secure registration (Username, Email, NIC, Password) and Login with SQLite.
-  - Automatic session persistence using `SharedPreferences`.
-  - Working **Forgot Password** recovery and password reset system.
-
-- **⛅ Real-Time Weather Forecasting**:
-  - Live weather updates (Temperature, Rainfall, Humidity) powered by the **Open-Meteo REST API** using **Retrofit 2** & **Gson**.
-  - Helps farmers and growers decide the ideal day and conditions for fertilizing.
-
-- **📍 Interactive Branch Locator**:
-  - Integrated **Google Maps SDK** displaying Plant Pal physical stores and branches across Sri Lanka (Colombo, Ratnapura, Kalawana).
-
-- **🌱 Comprehensive Product Catalog**:
-  - Categorized into **Organic**, **Synthetic**, and **Blends**.
-  - Detailed product descriptions, usage instructions, pricing, and visual assets.
-
-- **🛒 Dynamic Shopping Cart**:
-  - Full SQLite-backed shopping cart with dynamic item loading.
-  - Real-time quantity increment/decrement (`+` / `-`) and item removal (`✕`).
-  - Automatic subtotal, shipping, and grand total calculations.
-
-- **💳 Smooth Checkout & Delivery Flow**:
-  - Mock payment gateway supporting Card and Cash on Delivery.
-  - Form-validated shipping address capture with profile auto-fill.
-  - Order logging and instant order confirmation.
-
-- **👤 Profile & Settings**:
-  - **Account Management**: View and update profile details (Name, Email, Phone, Address) stored in SQLite.
-  - **Dark Mode**: Instant theme toggling between Day and Night modes with state persistence.
-  - **Notifications & Reminders**: Configurable app alerts.
-  - **Logout**: Safe session clearance.
+Plant Pal is a native Android application designed to help farmers and home gardeners purchase fertilizers and plant care products online. The app provides product browsing categorized into Organic, Synthetic, and Specialized Blends, live weather forecasting to plan fertilizer application, an interactive Google Map for physical store branches, a shopping cart with local SQLite database storage, user authentication, and profile management.
 
 ---
 
-## 🛠️ Technology Stack & Libraries
+## Key Features
 
-| Component | Technology |
-|---|---|
-| **Language** | Java (Java 8 / Java 17) |
-| **Platform** | Android Native (Min SDK 24, Target SDK 34) |
-| **Local Database** | SQLite (`SQLiteOpenHelper`) |
-| **Network & REST API**| Retrofit 2.9.0 + Gson Converter + OkHttp Logging Interceptor |
-| **Maps & Location** | Google Play Services Maps SDK (18.2.0) + Maps Utils |
-| **UI Components** | AndroidX Material Components, ConstraintLayout, CardView, BottomNavigationView |
+- **User Authentication:** 
+  - User Sign Up and Login with credentials saved in local SQLite database (`plantPalDB.db`).
+  - Forgot Password option to reset password using username and email.
+  - Auto-login session management using SharedPreferences.
 
----
+- **Dashboard & Weather Forecast:**
+  - Real-time temperature and rainfall forecast fetched using Open-Meteo REST API via Retrofit library.
+  - Quick navigation to Organic, Synthetic, and Blends fertilizer categories.
 
-## 📂 Project Structure
+- **Store Locations:**
+  - Google Maps integration with markers showing Plant Pal branch locations (Kalawana, Ratnapura, Colombo).
 
-```
-plantpal/
-├── app/
-│   ├── src/main/
-│   │   ├── java/com/s22010022/plantpal/
-│   │   │   ├── MainActivity.java        # Splash & entry point (session checking)
-│   │   │   ├── Forfarmers.java          # Onboarding video player
-│   │   │   ├── Login.java               # Authentication & session creation
-│   │   │   ├── SignUp.java              # User registration
-│   │   │   ├── Fogottenpassword.java    # Password recovery dialog
-│   │   │   ├── Dashbord.java            # Home dashboard & Live weather API
-│   │   │   ├── Googlemap.java           # Store location map markers
-│   │   │   ├── fertilizerPage1.java     # Organic category
-│   │   │   ├── fertilizerPage2.java     # Synthetic category
-│   │   │   ├── fertilizerPage3.java     # Blends category
-│   │   │   ├── productdiscription.java  # Dynamic product view & Add to Cart
-│   │   │   ├── cart.java                # Dynamic shopping cart & total calculation
-│   │   │   ├── PaymentPage.java         # Payment selection & review
-│   │   │   ├── shippingaddress.java     # Shipping details & order recording
-│   │   │   ├── EndPageActivity.java     # Order confirmation screen
-│   │   │   ├── account.java             # Profile view & editor
-│   │   │   ├── setting.java             # Dark mode, notifications & logout
-│   │   │   ├── databaseHelper.java      # SQLite schema, queries & CRUD logic
-│   │   │   └── SessionManager.java      # SharedPreferences session handler
-│   │   └── res/                         # Layouts, vector drawables & media
-│   └── build.gradle.kts                 # App-level dependencies
-└── settings.gradle.kts                  # Project settings
-```
+- **Product Categories & Details:**
+  - Categorized browsing: Organic Fertilizers, Synthetic Fertilizers, and Blends.
+  - Product detail view showing description, price, and image with "Add to Cart" and "Buy Now" options.
+
+- **Shopping Cart:**
+  - Dynamic shopping cart backed by SQLite database.
+  - Ability to increase/decrease product quantities or remove items.
+  - Automatic calculation of subtotal and total cost.
+
+- **Checkout & Order Placement:**
+  - Mock payment option (Card / Cash on Delivery).
+  - Shipping address form with validation.
+  - Order details recorded into local SQLite database upon submission.
+
+- **User Profile & Settings:**
+  - Account screen allowing users to view and update contact details (Email, Phone, Address).
+  - Settings screen with Dark Mode switch, notifications toggle, and Logout button.
 
 ---
 
-## 🚀 Getting Started
+## Technology Stack
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Lakshitha941/plantpal-fertilizer-dilivery-app.git
-   ```
-2. **Open in Android Studio**:
-   - Open Android Studio $\rightarrow$ Click **Open** $\rightarrow$ Select the cloned folder.
-3. **Gradle Sync & Build**:
-   - Let Gradle download dependencies and sync.
-4. **Run the App**:
-   - Connect an Android device or start an emulator $\rightarrow$ Click **Run (▶️)**.
+- **Platform:** Android (Java)
+- **Min SDK:** 24 (Android 7.0) | **Target SDK:** 34 (Android 14)
+- **IDE:** Android Studio
+- **Database:** SQLite (Native `SQLiteOpenHelper`)
+- **Networking:** Retrofit 2.9.0 with Gson converter
+- **APIs:** Open-Meteo Weather API, Google Maps SDK
+- **Architecture:** Android Activities, Intent communication, SharedPreferences
 
 ---
 
-## 📄 License
-This project is developed for educational and portfolio demonstration purposes.
+## How to Run the Project
+
+1. Open Android Studio.
+2. Select **Open** and choose the `plantpal` project directory.
+3. Allow Gradle to sync the dependencies.
+4. Connect an Android phone with USB Debugging enabled, or launch an Android Virtual Device (AVD).
+5. Click the **Run** button (or `Shift + F10`) to build and launch the application.
+
+---
+
+## Database Tables (`plantPalDB.db`)
+
+1. **`userCredentials`**: Stores user ID, username, email, nic, password, phone, and address.
+2. **`cart`**: Stores cart ID, username, product name, category, price, quantity, and image resource.
+3. **`orders`**: Stores order ID, username, customer name, address, city, phone, total amount, and date.

@@ -48,7 +48,7 @@ public class shippingaddress extends AppCompatActivity {
                 // Save order in database & clear cart
                 db.insertOrder(sessionManager.getUsername(), fullName, address, city, phone, totalAmount);
 
-                Toast.makeText(shippingaddress.this, "Order placed successfully! 🌿", Toast.LENGTH_SHORT).show();
+                Toast.makeText(shippingaddress.this, "Order placed successfully!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(shippingaddress.this, EndPageActivity.class);
                 intent.putExtra("order_user", fullName);
                 startActivity(intent);

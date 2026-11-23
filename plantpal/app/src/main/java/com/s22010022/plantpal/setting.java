@@ -55,7 +55,7 @@ public class setting extends AppCompatActivity {
                 if (switchNotifications != null) {
                     sessionManager.setNotificationsEnabled(switchNotifications.isChecked());
                 }
-                Toast.makeText(setting.this, "Settings Saved Successfully! 🌿", Toast.LENGTH_SHORT).show();
+                Toast.makeText(setting.this, "Settings Saved Successfully", Toast.LENGTH_SHORT).show();
             });
         }
 

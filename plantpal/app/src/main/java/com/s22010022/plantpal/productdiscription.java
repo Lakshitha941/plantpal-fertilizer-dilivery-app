@@ -39,7 +39,6 @@ public class productdiscription extends AppCompatActivity {
         btnBuyNow = findViewById(R.id.btnBuyNow);
         btnAddToCart = findViewById(R.id.btnAddToCart);
 
-        // Retrieve data passed from previous activity or use defaults
         Intent intent = getIntent();
         productName = intent.getStringExtra("product_name");
         if (productName == null) productName = "Organic Compost";
@@ -55,7 +54,6 @@ public class productdiscription extends AppCompatActivity {
             productDesc = "Made from locally recycled garden prunings, food products and vegetable trimmings. Contains no biosolids or steer manure.";
         }
 
-        // Bind data to UI
         if (tvProductName != null) tvProductName.setText(productName);
         if (tvProductType != null) tvProductType.setText(productCategory + " - $" + productPrice);
         if (tvProductDesc != null) tvProductDesc.setText(productDesc);
@@ -65,7 +63,7 @@ public class productdiscription extends AppCompatActivity {
             btnAddToCart.setOnClickListener(v -> {
                 boolean added = db.addToCart(sessionManager.getUsername(), productName, productCategory, productPrice, 1, productImageRes);
                 if (added) {
-                    Toast.makeText(productdiscription.this, productName + " added to cart! 🛒", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(productdiscription.this, productName + " added to cart", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(productdiscription.this, "Failed to add to cart", Toast.LENGTH_SHORT).show();
                 }

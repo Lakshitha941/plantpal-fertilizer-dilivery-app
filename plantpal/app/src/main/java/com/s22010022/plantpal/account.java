@@ -62,7 +62,7 @@ public class account extends AppCompatActivity {
             boolean updated = db.updateUserProfile(uName, email, phone, address);
             if (updated) {
                 setFieldsEditable(false);
-                Toast.makeText(account.this, "Profile updated successfully! ✅", Toast.LENGTH_SHORT).show();
+                Toast.makeText(account.this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(account.this, "Failed to update profile", Toast.LENGTH_SHORT).show();
             }
